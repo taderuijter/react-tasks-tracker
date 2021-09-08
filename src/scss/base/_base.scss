@@ -1,0 +1,32 @@
+/* Selection */
+::selection {
+    background: $black; /* WebKit/Blink Browsers */
+    color: $white;
+}
+
+::-moz-selection {
+    background: $black; /* Gecko Browsers */
+    color: $white;
+}
+
+/* Links */
+a {
+    color: $black;
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover {
+        color: $black;
+        text-decoration: none;
+    }
+
+    &::visited {
+        color: $black;
+        text-decoration: underline;
+    }
+}
+
+/* Broken image symbol */
+img.lazyload:not([src]) {
+	visibility: hidden;
+}

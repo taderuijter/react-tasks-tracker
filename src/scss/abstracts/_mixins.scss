@@ -1,0 +1,119 @@
+/* Screens */
+@mixin xs-screen() {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin sm-screen() {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin md-screen() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg-screen() {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl-screen() {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+/* Custom screens */
+@mixin custom-screen($res) {
+  @media (min-width: $res+"px") {
+    @content;
+  }
+}
+
+/* Border radius mixin */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Transition */
+@mixin transition {
+  -webkit-transition: all ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Center align */
+@mixin center-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical aligned */
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Horizontal align */
+@mixin horizontal-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Custom Font Face */
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/#{$file}.woff") format("woff"),
+    url("../fonts/#{$file}.ttf") format("truetype"),
+    url("../fonts/#{$file}.svg?#webfont") format("svg");
+  }
+}
+
+/* Background center */
+@mixin background-center {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Text Shortening */
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Push auto */
+@mixin push--auto {
+  margin: { 
+      left: auto;
+      right: auto;
+  }
+}
+
+@mixin responsive-div {
+  width: 100%;
+  
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+/*Core colors*/
+$white: #ffffff;
+$black: #000000;
+
+
+/* Custom Font Family */
+$fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
+$custom-family: 'Poppins', sans-serif;
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1142px
+) !default;
+// scss-docs-end container-max-widths
